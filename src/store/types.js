@@ -1,0 +1,4 @@
+export const GET_MOVIES = 'GET_MOVIES';
+export const MOVIES_ERROR = 'MOVIES_ERROR'
+export const GET_COMEDYMOVIES = 'GET_COMEDYMOVIES';
+export const GET_CRIME_MOVIES = 'GET_CRIME_MOVIES';
