@@ -1,6 +1,5 @@
 import {
-  GET_MOVIES,
-  GET_COMEDYMOVIES,
+
   GET_CRIME_MOVIES
 } from '../types'
 
@@ -20,30 +19,17 @@ export default function (state = initialState, action) {
   var newState = {}
  
   switch (action.type) {
-    // case GET_MOVIES:
-    //   // console.log(action.payload)
-    //   newState = {
-    //     ...newState,
-    //     actionMovies : action.payload
-    //   }
-    
-    //   break;
 
-      case GET_COMEDYMOVIES:
-      newState = {
-        ...newState,
-        comedyMovies : action.payload
-      }
       
-      break;
+     
 
-      // case GET_CRIME_MOVIES:
-      //   newState = {
-      //     ...newState,
-      //     CrimeMovies : [...action.payload]
-      //   }
-      //      alert(newState.CrimeMovies);
-      //   break;
+      case GET_CRIME_MOVIES:
+        newState = {
+          ...newState,
+          crimeMovies : [...action.payload]
+        }
+  
+        break;
       
       
     default:

@@ -8,10 +8,10 @@ const Row = (props) => {
         
         <div>
 
-            <h1>this is raw comp    </h1>
-            <h2 style={{color:'red'}}>{props.title}</h2>
+           
+          
             
-            <ItemMovies itemData={props.data}></ItemMovies>
+            <ItemMovies itemData={props.data} title={props.title}></ItemMovies>
         </div>
     );
 };

@@ -1,17 +1,23 @@
 import React from 'react';
-
+import "./Row.css";
+ const base_URL= "https://image.tmdb.org/t/p/original/"
 const ItemMovies = (props) => {
 
     console.log(props.itemData);
 
-    const data = props.itemData.map((e)=>{
-    return <h1>{e.original_name}</h1>
-    })
+
     return (
-        <div>
-            
-            <h1>this is itemmovies data</h1>
-            {data}
+        <div className="row">
+              <h2 style={{color:'red'}}>{props.title}</h2>
+          <div className="row__posters">
+            {props.itemData.map(e =>(
+              <img 
+              className="row__poster"
+              src={`${base_URL}${e.poster_path}`}
+               alt={e.name} 
+              />
+            ))}
+            </div>
         </div>
     );
 };

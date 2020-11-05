@@ -1,25 +1,36 @@
-import React, { Component } from 'react'
+import React, { useEffect} from 'react'
 import {connect} from 'react-redux'
-import {getMovies} from '../store/actions/actionMovies'
+import {getActionMovies} from '../store/actions/actionMovies'
 import {getComedyMovies} from '../store/actions/comedyMovies'
 import {getCrimeMovies} from '../store/actions/crimeMovies'
 import bla from '../requests/requests'
 import Row from './Row'
 
 
- class movies extends Component {
-  
-    componentWillMount(){        
-        this.props.getMovies()
-        this.props.getComedyMovies()
-        // this.props.getCrimeMovies()
-    }
 
-    render() {        
+
+
+ function Movies(props) {
+    useEffect(() => {
+        // code to run on component mount
+        props.getActionMovies()
+      props.getComedyMovies()
+         props.getCrimeMovies()
+      }, [])
+    // useEffect((props) => {   
+    //     props.getActionMovies()
+    //     props.getComedyMovies()
+    //     props.getCrimeMovies()
+        
+    //   });
+
+
+         
          return(
             <div>
-             <Row   data={this.props.data.movies.actionMovies}> </Row> 
-              <Row  data={this.props.data.comedyMovies.comedyMovies}> </Row>
+             <Row title={'Action Movies:'}  data={props.data.actionMovies.actionMovies}> </Row> 
+              <Row title={'Comedy movies'}  data={props.data.comedyMovies.comedyMovies}> </Row>
+              <Row title={'Crime movies'}  data={props.data.crimeMovies.crimeMovies}> </Row>
               
               </div>
 
@@ -27,7 +38,7 @@ import Row from './Row'
          
        
     
-    }
+    
  
  }
 const mapStateToProps  = (state) => {
@@ -35,4 +46,4 @@ const mapStateToProps  = (state) => {
    return {  data:state}
 }
 
-export default connect(mapStateToProps, {getMovies, getComedyMovies,getCrimeMovies})(movies)
+export default connect(mapStateToProps, {getActionMovies, getComedyMovies,getCrimeMovies})(Movies)
