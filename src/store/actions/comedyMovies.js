@@ -13,10 +13,7 @@ export const getComedyMovies = () => async dispatch => {
         })
     }
     catch(e){
-        dispatch( {
-            type: MOVIES_ERROR,
-            payload: console.log(e),
-        })
-    }
-
-}
+        return e
+     }
+ 
+ }

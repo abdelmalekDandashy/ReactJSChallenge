@@ -13,10 +13,7 @@ export const getMovies = () => async dispatch => {
         })
     }
     catch(e){
-        dispatch( {
-            type: MOVIES_ERROR,
-            payload: console.log(e),
-        })
-    }
-
-}
+        return e
+     }
+ 
+ }

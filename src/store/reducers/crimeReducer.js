@@ -20,22 +20,22 @@ export default function (state = initialState, action) {
   var newState = {}
  
   switch (action.type) {
-    case GET_MOVIES:
-      // console.log(action.payload)
+    // case GET_MOVIES:
+    //   // console.log(action.payload)
+    //   newState = {
+    //     ...newState,
+    //     actionMovies : action.payload
+    //   }
+    
+    //   break;
+
+      case GET_COMEDYMOVIES:
       newState = {
         ...newState,
-        actionMovies : action.payload
+        comedyMovies : action.payload
       }
-    
-      break;
-
-      // case GET_COMEDYMOVIES:
-      // newState = {
-      //   ...newState,
-      //   comedyMovies : action.payload
-      // }
       
-      // break;
+      break;
 
       // case GET_CRIME_MOVIES:
       //   newState = {

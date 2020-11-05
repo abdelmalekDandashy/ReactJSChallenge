@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="App">
     <h1>Redux Tutorial</h1>
+    XXXXXXXXXXXXXXXXXXXXX
     <Movies></Movies>
-
+    XXXXXXXXXXXXXXXXXXXXX
 </div>
   );
 }
