@@ -1,0 +1,21 @@
+.background{
+    width: 500px;
+    height: 500px;
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+.container{
+    width: 1000px;
+    height: 1000px;
+}
+.name{
+    text-align: center;
+    color: rgb(150, 8, 8) ;
+    
+}
+.desc{
+    text-align: center;
+    color: rgb(252, 252, 252) ;
+    
+}

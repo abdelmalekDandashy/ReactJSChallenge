@@ -5,6 +5,7 @@ import {getComedyMovies} from '../store/actions/comedyMovies'
 import {getCrimeMovies} from '../store/actions/crimeMovies'
 import bla from '../requests/requests'
 import Row from './Row'
+import Header from './Header'
 
 
 
@@ -28,7 +29,8 @@ import Row from './Row'
          
          return(
             <div>
-             <Row title={'Action Movies:'}  data={props.data.actionMovies.actionMovies}> </Row> 
+               <Header></Header>
+             <Row title={'Action Movies'}  data={props.data.actionMovies.actionMovies}> </Row> 
               <Row title={'Comedy movies'}  data={props.data.comedyMovies.comedyMovies}> </Row>
               <Row title={'Crime movies'}  data={props.data.crimeMovies.crimeMovies}> </Row>
               

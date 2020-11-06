@@ -8,7 +8,8 @@ const initialState = {
   comedyMovies: [],
   crimeMovies: [],
   loading: true,
-  showCrimeMovies: ''
+  showCrimeMovies: '',
+  movieDetails:[]
 
 
 }
